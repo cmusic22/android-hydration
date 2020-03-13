@@ -7,7 +7,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
 @Database(entities = {WaterRecord.class}, version = 1, exportSchema = false)
-public class WaterDatabase extends RoomDatabase {
+public abstract class WaterDatabase extends RoomDatabase {
 
     private static volatile WaterDatabase INSTANCE;
 
@@ -22,5 +22,6 @@ public class WaterDatabase extends RoomDatabase {
                 }
             }
         }
+        return INSTANCE;
     }
 }

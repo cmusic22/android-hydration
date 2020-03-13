@@ -37,7 +37,7 @@ public class WaterFragment extends Fragment {
 
     private static final String ARG_DAY_STRING = "arg_day_string";
 
-    public WaterFragment() {// Required empty public constructor}
+    public WaterFragment() {}// Required empty public constructor
 
     public static WaterFragment newInstance(String day) {
         WaterFragment fragment = new WaterFragment();
@@ -83,7 +83,7 @@ public class WaterFragment extends Fragment {
 
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 if (waterRecord == null) {return;}
 
                 int glasses = waterRecord.getGlasses();
@@ -96,7 +96,7 @@ public class WaterFragment extends Fragment {
 
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 if (waterRecord == null){return;}
 
                 waterRecord.setGlasses(0);
